@@ -48,7 +48,7 @@
             <li>
               <a
                 title="Check our latest blogs about projects"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
+                class="btn btn-outline btn-active text-black text-xl"
                 href="./blog.html"
               >
                 Blog
@@ -58,7 +58,7 @@
             <li>
               <a
                 title="Freequently Asked questions"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
+                class="btn btn-outline btn-active text-black text-xl"
                 href="./faq.html"
               >
                 FAQ
@@ -92,18 +92,25 @@
       <!-- Buttons -->
 
       <div class="flex justify-center gap-3 py-10">
-        <button class="btn btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]">History</button>
+        <button
+          id="btn-donation-cards"
+          class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] "
+        >
+          Donation
+        </button>
 
-        <button class="btn text-black text-xl ">Donation</button>
+        <button id="btn-history" class="btn btn-outline btn-active text-black text-xl">
+          History
+        </button>
       </div>
 
       <!-- Donation Cards -->
 
-      <div
-        class=" rounded-lg flex flex-col gap-5"
-      >
+      <div id="donation-cards-container" class="rounded-lg flex flex-col gap-5">
         <!-- Card 1 -->
-        <div class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl">
+        <div
+          class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl"
+        >
           <div class="flex-1">
             <img class="w-full" src="./assets/noakhali.png" alt="" />
           </div>
@@ -123,7 +130,7 @@
               <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
-              <p class="text-justify text-gray-500 text-sm md:text-base ">
+              <p class="text-justify text-gray-500 text-sm md:text-base">
                 The recent floods in Noakhali have caused significant damage to
                 homes infrastructure. Your donation will help provide essential
                 supplies and to those affected by this disaster. Every
@@ -149,7 +156,9 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl">
+        <div
+          class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl"
+        >
           <div class="flex-1">
             <img class="w-full" src="./assets/feni.png" alt="" />
           </div>
@@ -167,9 +176,17 @@
 
             <div>
               <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
-                Donate for Flood Relief in Feni,Bangladesh              </h1>
-              <p class="text-justify text-gray-500 text-sm md:text-base ">
-                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                Donate for Flood Relief in Feni,Bangladesh
+              </h1>
+              <p class="text-justify text-gray-500 text-sm md:text-base">
+                The recent floods in Feni have devastated local communities,
+                leading to severe disruption and loss. Your generous donation
+                will help provide immediate aid, including food, clean water,
+                and medical supplies, to those affected by this calamity.
+                Together, we can offer crucial support and help rebuild lives in
+                the aftermath of this disaster. Every contribution counts
+                towards making a real difference. Please consider donating today
+                to assist those in urgent need.
               </p>
             </div>
             <div>
@@ -189,7 +206,9 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl">
+        <div
+          class="border-2 border-[#ff997498] bg-[rgb(255,215,196)] bg-opacity-50 flex p-5 gap-3 flex-col md:flex-row rounded-xl"
+        >
           <div class="flex-1">
             <img class="w-full" src="./assets/quota-protest.png" alt="" />
           </div>
@@ -207,9 +226,18 @@
 
             <div>
               <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
-                Aid for Injured in the Quota Movement              </h1>
-              <p class="text-justify text-gray-500 text-sm md:text-base ">
-                The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                Aid for Injured in the Quota Movement
+              </h1>
+              <p class="text-justify text-gray-500 text-sm md:text-base">
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is
+                crucial in providing medical assistance, rehabilitation, and
+                necessary supplies to those affected. By contributing, you help
+                ensure that injured individuals receive the care and support
+                they need during this challenging time. Every donation plays a
+                vital role in alleviating their suffering and aiding in their
+                recovery. Please consider making a donation to support these
+                brave individuals in their time of need.
               </p>
             </div>
             <div>
@@ -228,6 +256,12 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- History -->
+
+      <div id="donation-histories" class="hidden">
+        <h1>Donation History</h1>
       </div>
     </main>
 
