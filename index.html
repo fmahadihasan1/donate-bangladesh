@@ -12,9 +12,11 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-7xl m-auto bg-[rgba(118,150,255,0.46)]">
-    <header class="sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50">
-      <div class="navbar rounded-xl opacity-80 md:py-4">
+  <body class="bg-[rgba(118,150,255,0.46)]">
+    <header
+      class="max-w-7xl m-auto sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50 rounded-md"
+    >
+      <div class="navbar opacity-80 md:py-4">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -86,10 +88,65 @@
       </div>
     </header>
 
-    <main class="  ">
+    <main class="max-w-7xl m-auto">
+      <!-- Buttons -->
+
       <div class="flex justify-center gap-3 py-10">
-        <button class="btn">History</button>
+        <button class="btn btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]">History</button>
         <button class="btn">Donation</button>
+      </div>
+
+      <!-- Donation Cards -->
+
+      <div
+        class="bg-[rgb(255,215,196)] bg-opacity-50 border-2 border-[#ff997498] rounded-lg"
+      >
+        <!-- Card 1 -->
+        <div class="container flex p-5 gap-3">
+          <div class="flex-1">
+            <img class="w-full" src="./assets/noakhali.png" alt="" />
+          </div>
+
+          <div class="texts flex-1 flex flex-col justify-around">
+            <a
+              class="bg-gray-200 p-3 rounded-md font-medium flex gap-3 items-center justify-center max-w-48"
+              title="Donated until now"
+            >
+              <img src="./assets/coin.png" alt="" />
+
+              <span class="text-black text-lg">0.00</span>
+              <span class="text-lg">BDT</span>
+            </a>
+
+            <div>
+              <h1 class="font font-bold text-2xl mb-4">
+                Donate for Flood at Noakhali, Bangladesh
+              </h1>
+              <p class="text-justify text-gray-500">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+            </div>
+            <div>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input w-full border border-[#FF9874] bg-transparent"
+                placeholder="Write donation Amount"
+              />
+              <input
+                type="submit"
+                value="Donate"
+                class="btn w-full border mt-4 btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
