@@ -132,7 +132,10 @@
             </a>
 
             <div>
-              <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
+              <h1
+                id="project-name"
+                class="font font-bold text-lg md:text-2xl md:mb-4"
+              >
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
               <p class="text-justify text-gray-500 text-sm md:text-base">
@@ -282,30 +285,32 @@
                 <th>Transaction Date & Time</th>
               </tr>
             </thead>
-            <tbody class="text-xl text-center">
-              <tr>
-                <th>1</th>
-                <td>500.00</td>
-                <td>Donate for Flood at Noakhali, Bangladesh</td>
-                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
-              </tr>
-              <tr>
-                <th>2</th>
-                <td>500.00</td>
-                <td>Donate for Flood at Noakhali, Bangladesh</td>
-                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
-              </tr>
-              <tr>
-                <th>3</th>
-                <td>500.00</td>
-                <td>Donate for Flood at Noakhali, Bangladesh</td>
-                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
-              </tr>
-
+            <tbody id="transaction-list" class="text-xl text-center">
               <!-- <td class="text-center text-3xl" colspan="4">No Donation Has Been Founded</td> -->
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div>
+        <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box text-center flex flex-col justify-center">
+            <h3 class="text-2xl font-bold mb-5">Congrates!</h3>
+            <figure class="flex justify-center items-center">
+              <img class="h-10" src="./assets/coin.png" alt="" />
+            </figure>
+            <p>
+              you have successfully donated
+              <span class="font-bold" id="donated"></span> BDT. for
+            </p>
+            <p id="project-title" class="font-bold"></p>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Ok</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </div>
     </main>
 

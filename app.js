@@ -60,10 +60,13 @@ document
 let currentBalanceText = document.getElementById("current-balance");
 let currentBalance = parseFloat(currentBalanceText.innerText);
 
+let transactionNumber = 0;
+
 // donation calculation formula
 
-function donatation(inputId, donatedProjectMoney) {
+function donatation(inputId, donatedProjectMoney, projectTitle) {
   const donationAmount = document.getElementById(inputId);
+  const projectName = document.getElementById(projectTitle);
 
   if (!/^-?\d+(\.\d+)?$/.test(donationAmount.value)) {
     alert(donationAmount.value + " Wrong Input");
@@ -71,7 +74,10 @@ function donatation(inputId, donatedProjectMoney) {
     alert("you can not donate negative money");
   } else if (parseFloat(donationAmount.value) > currentBalance) {
     alert("please topup your account");
-  } else {
+  }
+
+  // checkup done. now calculation
+  else {
     currentBalance = currentBalance - parseFloat(donationAmount.value);
     currentBalanceText.innerText = currentBalance.toFixed(2);
 
@@ -81,6 +87,25 @@ function donatation(inputId, donatedProjectMoney) {
       parseFloat(donationAmount.value);
 
     donatedByOthersString.innerText = othersPlusMyDonation.toFixed(2);
+
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `<tr>
+                <th>${(transactionNumber += 1)}</th>
+                <td>${parseFloat(donationAmount.value).toFixed(2)}</td>
+                <td>${projectName.innerText}</td>
+                <td>${new Date().toString()}</td>
+              </tr>`;
+
+    document.getElementById("transaction-list").appendChild(tr);
+
+    document.getElementById("donated").innerText = parseFloat(
+      donationAmount.value
+    ).toFixed(2);
+    document.getElementById("project-title").innerText = projectName.innerText;
+
+    my_modal.showModal();
+
     donationAmount.value = "";
   }
 }
@@ -88,5 +113,5 @@ function donatation(inputId, donatedProjectMoney) {
 document
   .getElementById("first-card-donate-btn")
   .addEventListener("click", function (e) {
-    donatation("first-card-input", "donated-by-others");
+    donatation("first-card-input", "donated-by-others", "project-name");
   });
