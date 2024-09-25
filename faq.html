@@ -92,6 +92,83 @@
 
     <main class="max-w-7xl m-auto flex flex-col gap-6 mt-16 px-4">
       <h1 class="text-center text-3xl font-extrabold">
+        Questions for Assignment
+      </h1>
+
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          what is the document object model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p class="text-justify">
+            The Document Object Model (DOM) is a programming interface for web
+            documents. It represents the structure of a web page as a tree of
+            objects, where each node is an element (such as HTML tags),
+            attribute, or text within the document. The DOM allows programming
+            languages (like JavaScript) to interact with and manipulate the
+            content, structure, and style of a webpage dynamically, without
+            reloading the page.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          how do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p class="text-justify">
+            To select an element from the DOM, I can use various JavaScript
+            methods. The most common ones include document.getElementById("id"),
+            which selects an element by its unique id, and
+            document.querySelector("selector"), which selects the first element
+            that matches a CSS selector. To select all matching elements, I can
+            use document.querySelectorAll("selector"), which returns a NodeList
+            of elements. Additionally, I can use
+            document.getElementsByClassName("className") to select elements by
+            class name, and document.getElementsByTagName("tagName") to select
+            elements by their tag name.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          what is event delegation in the context of DOM and why is it usefull?
+        </div>
+        <div class="collapse-content">
+          <p class="text-justify">
+            Event delegation in the context of the DOM is a technique where a
+            single event listener is added to a parent element instead of adding
+            separate event listeners to individual child elements. When an event
+            occurs on one of the child elements, the event "bubbles up" to the
+            parent, and the parent can handle the event by determining which
+            child triggered it. This is useful because it reduces the number of
+            event listeners in the document, improving performance and memory
+            usage. It also simplifies the code, especially when working with
+            dynamic content (e.g., if new elements are added later, I don't
+            need to attach new event listeners to each one individually). Event
+            delegation leverages event propagation (specifically event
+            bubbling), making it efficient for managing events in complex or
+            frequently changing DOM structures.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          how do you manipulate an element's attributes and styles using the DOM?
+
+        </div>
+        <div class="collapse-content">
+          <p class="text-justify">
+            To manipulate an element's attributes and styles using the DOM, I can utilize various JavaScript methods and properties. For changing attributes, I can use the setAttribute() method or directly access properties of the element, such as element.src for images. For example, to change the src attribute of an image, I might use image.setAttribute("src", "newImage.jpg"). To manipulate styles, I access the style property of the element, allowing I to set CSS properties like element.style.backgroundColor = "blue" or element.style.fontSize = "20px". Additionally, I can manage CSS classes using the classList property, which enables I to add classes with element.classList.add("newClass") or remove them with element.classList.remove("oldClass"). This approach facilitates dynamic and interactive modifications to webpage elements.
+          </p>
+        </div>
+      </div>
+
+      <h1 class="text-center text-3xl font-extrabold my-10">
         Frequently Asked Questions
       </h1>
 
