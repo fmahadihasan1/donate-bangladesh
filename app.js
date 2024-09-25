@@ -1,3 +1,7 @@
+function getElmnt(elmId) {
+  return document.getElementById(elmId);
+}
+
 function classRemoveAndAdd(
   removingClassFrom,
   removingClassName,
@@ -7,10 +11,10 @@ function classRemoveAndAdd(
   document
     .getElementById(removingClassFrom)
     .classList.remove(removingClassName);
-  document.getElementById(newClassItem).classList.add(addingClassName);
+  getElmnt(newClassItem).classList.add(addingClassName);
 }
 
-document.getElementById("btn-history").addEventListener("click", function (e) {
+getElmnt("btn-history").addEventListener("click", function (e) {
   classRemoveAndAdd(
     "donation-histories",
     "hidden",
@@ -57,7 +61,7 @@ document
     );
   });
 
-let currentBalanceText = document.getElementById("current-balance");
+let currentBalanceText = getElmnt("current-balance");
 let currentBalance = parseFloat(currentBalanceText.innerText);
 
 let transactionNumber = 0;
@@ -65,15 +69,16 @@ let transactionNumber = 0;
 // donation calculation formula
 
 function donatation(inputId, donatedProjectMoney, projectTitle) {
-  const donationAmount = document.getElementById(inputId);
-  const projectName = document.getElementById(projectTitle);
+  const donationAmount = getElmnt(inputId);
+  const projectName = getElmnt(projectTitle);
 
-  if (!/^-?\d+(\.\d+)?$/.test(donationAmount.value)) {
-    alert(donationAmount.value + " Wrong Input");
-  } else if (parseFloat(donationAmount.value) <= 0) {
-    alert("you can not donate negative money");
+  if (
+    !/^-?\d+(\.\d+)?$/.test(donationAmount.value) ||
+    parseFloat(donationAmount.value) <= 0
+  ) {
+    my_modal_2.showModal();
   } else if (parseFloat(donationAmount.value) > currentBalance) {
-    alert("please topup your account");
+    my_modal_3.showModal();
   }
 
   // checkup done. now calculation
@@ -81,7 +86,7 @@ function donatation(inputId, donatedProjectMoney, projectTitle) {
     currentBalance = currentBalance - parseFloat(donationAmount.value);
     currentBalanceText.innerText = currentBalance.toFixed(2);
 
-    const donatedByOthersString = document.getElementById(donatedProjectMoney);
+    const donatedByOthersString = getElmnt(donatedProjectMoney);
     const othersPlusMyDonation =
       parseFloat(donatedByOthersString.innerText) +
       parseFloat(donationAmount.value);
@@ -104,14 +109,12 @@ function donatation(inputId, donatedProjectMoney, projectTitle) {
           </div>
     `;
 
-    document.getElementById("transaction-list").appendChild(div);
+    getElmnt("transaction-list").appendChild(div);
 
-    document.getElementById("transaction-default").classList.add("hidden");
+    getElmnt("transaction-default").classList.add("hidden");
 
-    document.getElementById("donated").innerText = parseFloat(
-      donationAmount.value
-    ).toFixed(2);
-    document.getElementById("project-title").innerText = projectName.innerText;
+    getElmnt("donated").innerText = parseFloat(donationAmount.value).toFixed(2);
+    getElmnt("project-title").innerText = projectName.innerText;
 
     my_modal.showModal();
 
