@@ -181,12 +181,19 @@
             >
               <img src="./assets/coin.png" alt="" />
 
-              <span class="text-black text-lg">0.00</span>
+              <span
+                id="donated-by-others-second-card"
+                class="text-black text-lg"
+                >0.00</span
+              >
               <span class="text-lg">BDT</span>
             </a>
 
             <div>
-              <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
+              <h1
+                id="second-project-name"
+                class="font font-bold text-lg md:text-2xl md:mb-4"
+              >
                 Donate for Flood Relief in Feni,Bangladesh
               </h1>
               <p class="text-justify text-gray-500 text-sm md:text-base">
@@ -204,12 +211,13 @@
               <input
                 type="text"
                 name=""
-                id=""
+                id="second-card-input"
                 class="input w-full border border-[#FF9874] bg-transparent mt-4"
                 placeholder="Write donation Amount"
               />
               <input
                 type="submit"
+                id="second-card-donate-btn"
                 value="Donate"
                 class="btn w-full border mt-4 btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
               />
@@ -231,12 +239,17 @@
             >
               <img src="./assets/coin.png" alt="" />
 
-              <span class="text-black text-lg">0.00</span>
+              <span id="donated-by-others-third-card" class="text-black text-lg"
+                >0.00</span
+              >
               <span class="text-lg">BDT</span>
             </a>
 
             <div>
-              <h1 class="font font-bold text-lg md:text-2xl md:mb-4">
+              <h1
+                id="third-project-name"
+                class="font font-bold text-lg md:text-2xl md:mb-4"
+              >
                 Aid for Injured in the Quota Movement
               </h1>
               <p class="text-justify text-gray-500 text-sm md:text-base">
@@ -255,12 +268,13 @@
               <input
                 type="text"
                 name=""
-                id=""
+                id="third-card-input"
                 class="input w-full border border-[#FF9874] bg-transparent mt-4"
                 placeholder="Write donation Amount"
               />
               <input
                 type="submit"
+                id="third-card-donate-btn"
                 value="Donate"
                 class="btn w-full border mt-4 btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
               />
@@ -272,23 +286,14 @@
       <!-- History -->
 
       <div id="donation-histories" class="hidden min-h-screen">
-        <h1 class="text-center text-3xl">My Donation History</h1>
+        <h1 class="text-center text-3xl mb-10">My Donation History</h1>
 
-        <div class="overflow-x-auto mt-10">
-          <table class="table">
-            <!-- head -->
-            <thead class="text-xl text-center">
-              <tr>
-                <th>Transaction No.</th>
-                <th>Donation of</th>
-                <th>Project Name</th>
-                <th>Transaction Date & Time</th>
-              </tr>
-            </thead>
-            <tbody id="transaction-list" class="text-xl text-center">
-              <!-- <td class="text-center text-3xl" colspan="4">No Donation Has Been Founded</td> -->
-            </tbody>
-          </table>
+        <div id="transaction-list" class="max-w-7xl m-auto">
+          <div class="divider"></div>
+
+          <h3 id="transaction-default" class="text-center text-3xl" colspan="4">
+            No Donation Has Been Founded
+          </h3>
         </div>
       </div>
 

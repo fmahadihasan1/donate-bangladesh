@@ -70,7 +70,7 @@ function donatation(inputId, donatedProjectMoney, projectTitle) {
 
   if (!/^-?\d+(\.\d+)?$/.test(donationAmount.value)) {
     alert(donationAmount.value + " Wrong Input");
-  } else if (parseFloat(donationAmount.value) < 0) {
+  } else if (parseFloat(donationAmount.value) <= 0) {
     alert("you can not donate negative money");
   } else if (parseFloat(donationAmount.value) > currentBalance) {
     alert("please topup your account");
@@ -88,16 +88,25 @@ function donatation(inputId, donatedProjectMoney, projectTitle) {
 
     donatedByOthersString.innerText = othersPlusMyDonation.toFixed(2);
 
-    const tr = document.createElement("tr");
+    const div = document.createElement("div");
 
-    tr.innerHTML = `<tr>
-                <th>${(transactionNumber += 1)}</th>
-                <td>${parseFloat(donationAmount.value).toFixed(2)}</td>
-                <td>${projectName.innerText}</td>
-                <td>${new Date().toString()}</td>
-              </tr>`;
+    div.innerHTML = `
+    
+          <div class = 'border border-gray-400 rounded-md mb-5 p-5'>
 
-    document.getElementById("transaction-list").appendChild(tr);
+            <h1 class="text-2xl font-bold text-justify" > 
+            ${parseFloat(donationAmount.value).toFixed(2)} is donated for ${
+      projectName.innerText
+    }
+            </h1>
+            <p>Date: ${new Date().toString()}</p>
+
+          </div>
+    `;
+
+    document.getElementById("transaction-list").appendChild(div);
+
+    document.getElementById("transaction-default").classList.add("hidden");
 
     document.getElementById("donated").innerText = parseFloat(
       donationAmount.value
@@ -114,4 +123,23 @@ document
   .getElementById("first-card-donate-btn")
   .addEventListener("click", function (e) {
     donatation("first-card-input", "donated-by-others", "project-name");
+  });
+
+document
+  .getElementById("second-card-donate-btn")
+  .addEventListener("click", function (e) {
+    donatation(
+      "second-card-input",
+      "donated-by-others-second-card",
+      "second-project-name"
+    );
+  });
+  document
+  .getElementById("third-card-donate-btn")
+  .addEventListener("click", function (e) {
+    donatation(
+      "third-card-input",
+      "donated-by-others-third-card",
+      "third-project-name"
+    );
   });
