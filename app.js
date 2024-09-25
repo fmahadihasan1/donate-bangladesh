@@ -134,7 +134,7 @@ document
       "second-project-name"
     );
   });
-  document
+document
   .getElementById("third-card-donate-btn")
   .addEventListener("click", function (e) {
     donatation(

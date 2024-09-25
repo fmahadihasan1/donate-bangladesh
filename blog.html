@@ -12,9 +12,11 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-7xl m-auto bg-[rgba(118,150,255,0.46)]">
-    <header class="sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50">
-      <div class="navbar rounded-xl opacity-80 md:py-4">
+  <body class="bg-[rgba(118,150,255,0.46)] min-h-screen">
+    <header
+      class="max-w-7xl m-auto sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50 rounded-md"
+    >
+      <div class="navbar opacity-80 md:py-4">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -45,18 +47,18 @@
           <ul class="menu menu-horizontal px-1 hidden lg:flex gap-4">
             <li>
               <a
-              title="Check our latest blogs about projects"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
-                href="./blog.html"
+                title="Check our latest blogs about projects"
+                class="btn btn-outline btn-active text-black text-xl"
+                href="./index.html"
               >
-                Blog
+                Home
               </a>
             </li>
 
             <li>
               <a
-              title="Freequently Asked questions"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
+                title="Freequently Asked questions"
+                class="btn btn-outline btn-active text-black text-xl"
                 href="./faq.html"
               >
                 FAQ
@@ -80,14 +82,112 @@
           >
             <img src="./assets/coin.png" alt="" />
 
-            <span class="text-black text-xl">5000.00</span>
+            <span id="current-balance-blog-page" class="text-black text-xl"
+              >5000.00</span
+            >
           </a>
         </div>
       </div>
     </header>
 
-    <main class=""></main>
+    <main class="max-w-7xl m-auto flex flex-col gap-6 mt-16 px-4">
+      <div>
+        <h1 class="font-bold text-xl md:text-3xl text-justify">
+          Blog 1: Understanding the DOM: The Backbone of Web Development
+        </h1>
+        <h4 class="font-medium text-xl my-4">Written By: Mahadi Hasan </h4>
 
-    <script src="./app.js"></script>
+        <p class="text-justify font-medium text-lg">
+          The Document Object Model (DOM) is a crucial concept in web
+          development, serving as the bridge between HTML and JavaScript. It
+          represents the structure of a web page as a tree of objects, allowing
+          developers to manipulate and access elements dynamically. The DOM
+          provides a programming interface for web documents, enabling scripts
+          to update content, structure, and styles. Using methods like
+          getElementById() or querySelector(), developers can easily target
+          specific elements to modify or retrieve information. For instance,
+          adding event listeners to buttons or changing the text of a paragraph
+          becomes effortless with the DOM. Understanding the DOM is essential
+          for creating interactive and responsive web applications, making it a
+          fundamental skill for every web developer. Embracing the DOM allows
+          for greater flexibility and creativity in crafting engaging user
+          experiences.
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div>
+        <h1 class="font-bold text-xl md:text-3xl text-justify">
+          Blog 2: DOM Manipulation: Making Your Web Pages Dynamic
+        </h1>
+        <h4 class="font-medium text-xl my-4">Written By: Mahadi Hasan </h4>
+
+        <p class="text-justify font-medium text-lg">
+          DOM manipulation is a key technique in web development that allows
+          developers to create dynamic and interactive web pages. By accessing
+          the DOM, developers can modify HTML elements in real time, enhancing
+          user engagement and experience. Common methods for manipulating the
+          DOM include appendChild(), removeChild(), and innerHTML, which allow
+          for the addition, deletion, and modification of elements on the page.
+          For example, consider a simple form that updates a list when a user
+          submits data. Using DOM manipulation, you can instantly display the
+          new entry without reloading the page. This responsiveness is crucial
+          for modern web applications, where users expect instant feedback and
+          interactivity. By mastering DOM manipulation, developers can create
+          fluid and engaging experiences that captivate users, transforming
+          static web pages into lively applications that respond to user actions
+          seamlessly.
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div>
+        <h1 class="font-bold text-xl md:text-3xl text-justify">
+          Blog 3: The Importance of the DOM in Modern Web Applications
+        </h1>
+        <h4 class="font-medium text-xl my-4">Written By: Mahadi Hasan </h4>
+
+        <p class="text-justify font-medium text-lg">
+          In modern web applications, the Document Object Model (DOM) plays a
+          pivotal role in defining how users interact with websites. It acts as
+          an interface for the browser, translating HTML documents into a
+          structured representation that scripts can manipulate. This enables
+          developers to create highly interactive user interfaces that respond
+          to user input in real time. Frameworks like React and Angular build
+          upon the DOM, allowing for efficient rendering and updates. By
+          understanding the DOM’s structure and behavior, developers can
+          optimize their applications for performance and user experience.
+          Moreover, mastering the DOM empowers developers to utilize APIs that
+          enhance functionality, such as fetching data from a server and
+          dynamically updating the page. Ultimately, the DOM is the foundation
+          upon which modern web development is built, making it essential
+          knowledge for anyone looking to excel in this field.
+        </p>
+
+        <div class="divider"></div>
+      </div>
+      <div>
+        <h1 class="font-bold text-xl md:text-3xl text-justify">
+          Blog 4: Exploring the Browser's DOM API
+        </h1>
+        <h4 class="font-medium text-xl my-4">Written By: Mahadi Hasan </h4>
+
+        <p class="text-justify font-medium text-lg">
+          The DOM API is a powerful tool that allows developers to interact with
+          web pages programmatically. Through this API, developers can navigate
+          the DOM tree, modify attributes, and respond to events, all of which
+          enhance the functionality of web applications. The API provides a
+          plethora of methods and properties, such as createElement(),
+          addEventListener(), and classList, to facilitate element manipulation.
+          For instance, using addEventListener(), developers can easily
+          implement interactive features like buttons that change color on hover
+          or forms that validate user input in real time. Furthermore, the DOM
+          API is essential for creating single-page applications (SPAs), where
+          content updates dynamically without page reloads. By leveraging the
+          DOM API, developers can create smooth, seamless interactions that
+          improve user experience and make websites more engaging and
+          user-friendly. Understanding this API is crucial for anyone looking to
+          develop modern, interactive web applications.
+        </p>
+      </div>
+    </main>
   </body>
 </html>
