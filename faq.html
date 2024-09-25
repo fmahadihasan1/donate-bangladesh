@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ</title>
+    <title>Blogs</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
@@ -12,9 +12,11 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-7xl m-auto bg-[rgba(118,150,255,0.46)]">
-    <header class="sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50">
-      <div class="navbar rounded-xl opacity-80 md:py-4">
+  <body class="bg-[rgba(118,150,255,0.46)] min-h-screen">
+    <header
+      class="z-10 max-w-7xl m-auto sticky top-0 bg-[rgb(157,189,255)] bg-opacity-50 rounded-md"
+    >
+      <div class="navbar opacity-80 md:py-4">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -45,21 +47,21 @@
           <ul class="menu menu-horizontal px-1 hidden lg:flex gap-4">
             <li>
               <a
-              title="Check our latest blogs about projects"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
-                href="./blog.html"
+                title="Check our latest blogs about projects"
+                class="btn btn-outline btn-active text-black text-xl"
+                href="./index.html"
               >
-                Blog
+                Home
               </a>
             </li>
 
             <li>
               <a
-              title="Freequently Asked questions"
-                class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
-                href="./faq.html"
+                title="Freequently Asked questions"
+                class="btn btn-outline btn-active text-black text-xl"
+                href="./blog.html"
               >
-                FAQ
+                Blog
               </a>
             </li>
           </ul>
@@ -80,14 +82,142 @@
           >
             <img src="./assets/coin.png" alt="" />
 
-            <span class="text-black text-xl">5000.00</span>
+            <span id="current-balance-faq-page" class="text-black text-xl"
+              >5000.00</span
+            >
           </a>
         </div>
       </div>
     </header>
 
-    <main class=""></main>
+    <main class="max-w-7xl m-auto flex flex-col gap-6 mt-16 px-4">
+      <h1 class="text-center text-3xl font-extrabold">
+        Frequently Asked Questions
+      </h1>
 
-    <script src="./app.js"></script>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          1. How can I donate through your website?
+        </div>
+        <div class="collapse-content">
+          <p>
+            You can donate easily by clicking the "Donate" button and following
+            the instructions. We accept a variety of payment methods for your
+            convenience.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          2. Where does my donation go?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Your donation directly supports our ongoing projects, helping those
+            in need. You can read more about how funds are allocated on our
+            donation breakdown page.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          3. Is there a minimum amount required to donate?
+        </div>
+        <div class="collapse-content">
+          <p>
+            No, you can donate any amount that fits your budget. Every
+            contribution, big or small, makes a difference.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          4. Can I set up a recurring donation?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Yes! You have the option to make your donation recurring on a
+            monthly, quarterly, or yearly basis.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          5. Is my donation secure?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Absolutely. We use a secure, encrypted payment system to ensure your
+            financial information is safe and protected.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          6. Will I receive a donation receipt?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Yes, you will receive an email confirmation and a receipt
+            immediately after your donation is processed.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          7. Can I donate in someone else’s name?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Yes, we offer an option to donate on behalf of someone else. You can
+            include a message for them, and we’ll notify them of your gift.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          8. Are donations tax-deductible?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Yes, all donations to our organization are tax-deductible. We will
+            provide the necessary receipt for your tax records.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          9. Can I choose which cause my donation supports?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Yes, when you donate, you’ll have the option to select a specific
+            cause or project you want to support, or you can allow us to use the
+            funds where they are most needed.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          10. What if I have a question about my donation?
+        </div>
+        <div class="collapse-content">
+          <p>
+            If you have any questions or concerns regarding your donation, feel
+            free to contact our support team. We're here to help!
+          </p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
