@@ -10,8 +10,6 @@ function classRemoveAndAdd(
   document.getElementById(newClassItem).classList.add(addingClassName);
 }
 
-
-
 document.getElementById("btn-history").addEventListener("click", function (e) {
   classRemoveAndAdd(
     "donation-histories",
@@ -34,7 +32,6 @@ document.getElementById("btn-history").addEventListener("click", function (e) {
   );
 });
 
-
 document
   .getElementById("btn-donation-cards")
   .addEventListener("click", function (e) {
@@ -51,11 +48,45 @@ document
       "btn-donation-cards",
       "bg-[rgba(255,153,116,0.72)]"
     );
-    
+
     classRemoveAndAdd(
       "btn-history",
       "bg-[rgba(255,153,116,0.72)]",
       "btn-history",
       "btn-outline"
     );
+  });
+
+let currentBalanceText = document.getElementById("current-balance");
+let currentBalance = parseFloat(currentBalanceText.innerText);
+
+// donation calculation formula
+
+function donatation(inputId, donatedProjectMoney) {
+  const donationAmount = document.getElementById(inputId);
+
+  if (!/^-?\d+(\.\d+)?$/.test(donationAmount.value)) {
+    alert(donationAmount.value + " Wrong Input");
+  } else if (parseFloat(donationAmount.value) < 0) {
+    alert("you can not donate negative money");
+  } else if (parseFloat(donationAmount.value) > currentBalance) {
+    alert("please topup your account");
+  } else {
+    currentBalance = currentBalance - parseFloat(donationAmount.value);
+    currentBalanceText.innerText = currentBalance.toFixed(2);
+
+    const donatedByOthersString = document.getElementById(donatedProjectMoney);
+    const othersPlusMyDonation =
+      parseFloat(donatedByOthersString.innerText) +
+      parseFloat(donationAmount.value);
+
+    donatedByOthersString.innerText = othersPlusMyDonation.toFixed(2);
+    donationAmount.value = "";
+  }
+}
+
+document
+  .getElementById("first-card-donate-btn")
+  .addEventListener("click", function (e) {
+    donatation("first-card-input", "donated-by-others");
   });

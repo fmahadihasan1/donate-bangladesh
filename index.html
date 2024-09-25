@@ -82,7 +82,7 @@
           >
             <img src="./assets/coin.png" alt="" />
 
-            <span class="text-black text-xl">5000.00</span>
+            <span id="current-balance" class="text-black text-xl">5000.00</span>
           </a>
         </div>
       </div>
@@ -94,12 +94,15 @@
       <div class="flex justify-center gap-3 py-10">
         <button
           id="btn-donation-cards"
-          class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] "
+          class="btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)]"
         >
           Donation
         </button>
 
-        <button id="btn-history" class="btn btn-outline btn-active text-black text-xl">
+        <button
+          id="btn-history"
+          class="btn btn-outline btn-active text-black text-xl"
+        >
           History
         </button>
       </div>
@@ -122,7 +125,9 @@
             >
               <img src="./assets/coin.png" alt="" />
 
-              <span class="text-black text-lg">0.00</span>
+              <span id="donated-by-others" class="text-black text-lg"
+                >0.00</span
+              >
               <span class="text-lg">BDT</span>
             </a>
 
@@ -143,12 +148,15 @@
               <input
                 type="text"
                 name=""
-                id=""
+                title="Only decimal"
+                id="first-card-input"
                 class="input w-full border border-[#FF9874] bg-transparent mt-4"
-                placeholder="Write donation Amount"
+                placeholder="Write Donation Amount"
               />
               <input
                 type="submit"
+                title="only decimal"
+                id="first-card-donate-btn"
                 value="Donate"
                 class="btn w-full border mt-4 btn btn-active text-black text-xl bg-[rgba(255,153,116,0.72)] hover:bg-[rgb(255,152,116)]"
               />
@@ -260,8 +268,44 @@
 
       <!-- History -->
 
-      <div id="donation-histories" class="hidden">
-        <h1>Donation History</h1>
+      <div id="donation-histories" class="hidden min-h-screen">
+        <h1 class="text-center text-3xl">My Donation History</h1>
+
+        <div class="overflow-x-auto mt-10">
+          <table class="table">
+            <!-- head -->
+            <thead class="text-xl text-center">
+              <tr>
+                <th>Transaction No.</th>
+                <th>Donation of</th>
+                <th>Project Name</th>
+                <th>Transaction Date & Time</th>
+              </tr>
+            </thead>
+            <tbody class="text-xl text-center">
+              <tr>
+                <th>1</th>
+                <td>500.00</td>
+                <td>Donate for Flood at Noakhali, Bangladesh</td>
+                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>500.00</td>
+                <td>Donate for Flood at Noakhali, Bangladesh</td>
+                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>500.00</td>
+                <td>Donate for Flood at Noakhali, Bangladesh</td>
+                <td>Wed Sep 25 2024 02:44:11 GMT+0400 (Gulf Standard Time)</td>
+              </tr>
+
+              <!-- <td class="text-center text-3xl" colspan="4">No Donation Has Been Founded</td> -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
 
